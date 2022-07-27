@@ -34,7 +34,7 @@ int loop2(){
     int arr[100];
     count2=0;
     for(int i=0; i<n;i++){
-        if(arr[i] % 1==0&& arr[i]>0||arr[i] % 3==0||arr[i] % 5==0||arr[i] % 7==0){
+        if(arr[i]%1==0&&arr[i]%2!=0||arr[i] % 3==0&&arr[i]%2!=0||arr[i] % 5==0||arr[i] % 7==0||arr[i] % 9==0){
             count2++;
             
     }
@@ -54,8 +54,11 @@ int main()
     if(count1>count2){
         cout<< "so chan nhieu hon so le :-1\n";
     }
-    else 
+    else if(count1<count2)
     {
         cout<< "so le nhieu hon so chan :1\n";
+    }
+    else if(count1=count2){
+        cout<<"so chan bang so le:0\n";
     }
 }
